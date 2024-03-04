@@ -58,7 +58,7 @@ async function countFilesRecursively(DIR_PATH){
                 
           // 12. Call countFilesRecursively with the 'DIR_PATH':
 countFilesRecursively(DIR_PATH)
-          // 13. Once the function completes, log the total count of files in the directory along with the directory path:
+          // 13. Log total count of files in the directory with the directory path:
         .then((totalFileCount) => {
              console.log(`Total files in ${DIR_PATH}: ${totalFileCount}`);
         })

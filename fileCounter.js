@@ -32,12 +32,12 @@ async function countFilesRecursively(DIR_PATH){
             if (fileStats.isFile()) {
                                      // * isFile() return a boolean
                         fileCount++;
-                        // 9. If the item is a directory: 
+            // 9. If the item is a directory: 
                       }else if (fileStats.isDirectory()) {
                                     // * isDirectory() return a boolean
                 
-                        // a. Recursively call countFilesRecursively with the subdirectory path:
-                        // b. Add the returned count of files in the subdirectory to fileCount:
+               // a. Recursively call countFilesRecursively with the subdirectory path:
+               // b. Add the returned count of files in the subdirectory to fileCount:
                         fileCount += await countFilesRecursively(filePath);
                                                           // * when recursively call to countFilesRecursively function with the path of the subdirectory (filePath) 
                                                           //  It calc the total num of files in that subdirectory.
@@ -73,18 +73,3 @@ countFilesRecursively(DIR_PATH)
 
 
 
-
-
-
-//     - For each item in the directory:
-//         - Construct the full path of the item
-//         - Check if the item is a file:
-//             - If it is a file, increment fileCount by 1
-//         - Check if the item is a directory:
-//             - If it is a directory, recursively call countFilesRecursively with the subdirectory path
-//             - Add the returned count of files in the subdirectory to fileCount
-//     - Return the final value of fileCount
-
-// 2. Call countFilesRecursively with the specified directory path
-
-// 3. Once the function completes, the total count of files will be returned
